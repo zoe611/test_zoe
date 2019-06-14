@@ -1,0 +1,68 @@
+{
+    "identityPoolName": "noteswithamplify76f1fe7c_identitypool_76f1fe7c",
+    "allowUnauthenticatedIdentities": false,
+    "lambdaLogPolicy": "notesw_76f1fe7c_lambda_log_policy",
+    "openIdLambdaRoleName": "notesw_76f1fe7c_openid_lambda_role",
+    "openIdRolePolicy": "notesw_76f1fe7c_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "notesw_76f1fe7c_openid_lambda_iam_policy",
+    "openIdLogPolicy": "notesw_76f1fe7c_openid_lambda_log_policy",
+    "userPoolName": "noteswithamplify76f1fe7c_userpool_76f1fe7c",
+    "autoVerifiedAttributes": [
+        "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "roleName": "notesw76f1fe7c_sns-role",
+    "roleExternalId": "notesw76f1fe7c_role_external_id",
+    "policyName": "notesw76f1fe7c-sns-policy",
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+        "email"
+    ],
+    "userpoolClientName": "notesw76f1fe7c_app_client",
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+        "email"
+    ],
+    "userpoolClientReadAttributes": [
+        "email"
+    ],
+    "mfaLambdaRole": "notesw76f1fe7c_totp_lambda_role",
+    "mfaLambdaLogPolicy": "notesw76f1fe7c_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "notesw76f1fe7c_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "notesw76f1fe7c_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "notesw76f1fe7c_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "notesw76f1fe7c_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "notesw76f1fe7c_userpoolclient_lambda_iam_policy",
+    "userpoolClientSetAttributes": false,
+    "resourceName": "noteswithamplify76f1fe7c",
+    "authSelections": "identityPoolAndUserPool",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    },
+    "useDefault": "default"
+}
